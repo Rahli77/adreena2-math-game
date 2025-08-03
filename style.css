@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-family: 'Comic Neue', cursive;
+  background: url('assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#game-container {
+  text-align: center;
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+}
+
+input {
+  padding: 10px;
+  font-size: 20px;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffc107;
+  color: black;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff9800;
+}
+
+#question {
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+#feedback {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#timer, #score, #level-info {
+  font-size: 20px;
+  margin: 5px 0;
+}

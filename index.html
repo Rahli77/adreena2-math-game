@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Adreena - Perkalian</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <!-- Musik dan efek -->
+  <audio id="bgMusic" src="assets/music.mp3" loop></audio>
+  <audio id="correctSound" src="assets/correct.mp3"></audio>
+  <audio id="wrongSound" src="assets/wrong.mp3"></audio>
+  <audio id="clickSound" src="assets/click.mp3"></audio>
+
+  <!-- Tombol mulai musik -->
+  <button onclick="playMusic()" id="startMusic" style="position:absolute;top:20px;left:20px;z-index:1000;padding:10px;font-size:16px;">
+    🔊 Mainkan Musik
+  </button>
+
+  <!-- Container Game -->
+  <div id="game-container">
+    <h1>Halo, Adreena! 🎮</h1>
+    <div id="level-info">Level: <span id="level">1</span></div>
+    <div id="timer">⏱️ 45</div>
+    <div id="score">Score: <span id="scoreVal">0</span></div>
+
+    <div id="question">Soal muncul di sini</div>
+    <input type="number" id="answerInput" placeholder="Jawab di sini" autocomplete="off"/>
+    <button onclick="submitAnswer()">Jawab</button>
+
+    <div id="feedback"></div>
+
+    <div class="menu-buttons">
+      <button onclick="resetLevel()">🔁 Ulang Level</button>
+      <button onclick="restartGame()">🚀 Mulai Ulang</button>
+      <button onclick="showHighScore()">🏆 Skor Tertinggi</button>
+    </div>
+
+    <div id="highscoreBox" style="display:none;">
+      <p>🎖️ Skor tertinggi: <span id="highscore">0</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
